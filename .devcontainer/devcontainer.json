@@ -1,0 +1,28 @@
+{
+	"name": "homepage-docs",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"VARIANT": "18-bullseye"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"mhutchie.git-graph",
+				"streetsidesoftware.code-spell-checker",
+			],
+			"settings": {
+				"eslint.format.enable": true,
+				"eslint.lintTask.enable": true,
+				"eslint.packageManager": "pnpm"
+			}
+		}
+	},
+	"postCreateCommand": ".devcontainer/setup.sh",
+	"postStartCommand": "printf '\nContainer is running. Serve Homepage with \"pnpm run dev\".\n\n'",
+	"forwardPorts": [
+		3001
+	]
+}
