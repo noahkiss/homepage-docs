@@ -23,6 +23,6 @@
 	"postCreateCommand": ".devcontainer/setup.sh",
 	"postStartCommand": "printf '\nContainer is running. Serve Homepage with \"pnpm run dev\".\n\n'",
 	"forwardPorts": [
-		3001
+		3000
 	]
 }
